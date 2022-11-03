@@ -1,0 +1,15 @@
+GET http://localhost:8080/api/account?email=kongmeng&password=a
+Accept: application/json
+
+###
+POST http://localhost:8080/api/account
+Content-Type: application/json
+
+{
+  "firstName": "Kongmeng",
+  "lastName": "Lor",
+  "email": "a",
+  "password": "a"
+}
+
+###
