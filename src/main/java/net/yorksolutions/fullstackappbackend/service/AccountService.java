@@ -25,7 +25,7 @@ public class AccountService {
     }
 
     public AccountEntity login(String email, String password) {
-        Optional<AccountEntity> found = this.accountRepository.findByEmailAndAndPassword(email,password);
+        Optional<AccountEntity> found = this.accountRepository.findByEmailAndPassword(email,password);
         if (found.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }

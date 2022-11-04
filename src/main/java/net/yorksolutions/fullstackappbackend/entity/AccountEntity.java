@@ -1,4 +1,6 @@
 package net.yorksolutions.fullstackappbackend.entity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,8 +11,9 @@ public class AccountEntity {
 
     @Column(unique = true)//Having a unique email only
     String email;
+    @JsonIgnore
     String password;
-    String fristName;
+    String firstName;
     String lastName;
 
     public AccountEntity() {}
@@ -18,7 +21,7 @@ public class AccountEntity {
     public AccountEntity(String email, String password, String fristName, String lastName) {
         this.email = email;
         this.password = password;
-        this.fristName = fristName;
+        this.firstName = fristName;
         this.lastName = lastName;
     }
 
@@ -34,11 +37,11 @@ public class AccountEntity {
     }
 
     public String getFristName() {
-        return fristName;
+        return firstName;
     }
 
     public void setFristName(String fristName) {
-        this.fristName = fristName;
+        this.firstName = fristName;
     }
 
     public void setLastName(String lastName) {

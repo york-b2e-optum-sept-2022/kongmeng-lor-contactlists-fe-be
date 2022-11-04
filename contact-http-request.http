@@ -1,0 +1,46 @@
+GET http://localhost:8080/api/contact?accountId=1
+Accept: application/json
+
+###
+DELETE http://localhost:8080/api/contact?contactId=3
+
+###
+POST http://localhost:8080/api/contact
+Content-Type: application/json
+
+{
+  "ownerId": 1,
+  "name": "Dinh Lor",
+  "phoneNumber": 1234,
+  "email": "dinhlor",
+  "notes": "brother"
+}
+
+###
+
+POST http://localhost:8080/api/contact
+Content-Type: application/json
+
+{
+  "ownerId": 2,
+  "name": "Lucky Lor",
+  "phoneNumber": 4321,
+  "email": "dinhlor",
+  "notes": "brother"
+}
+
+###
+
+###
+POST http://localhost:8080/api/contact
+Content-Type: application/json
+
+{
+  "ownerId": 1,
+  "name": "haha Lor",
+  "phoneNumber": 1234,
+  "email": "dinhlor",
+  "notes": "brother"
+}
+
+###
